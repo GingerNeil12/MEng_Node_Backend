@@ -26,10 +26,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // Passport config
-require('./config/passport')(passport);
+//require('./config/passport')(passport);
 
 // Use Routes
-app.use('api/users', userRoutes);
+app.use('/api/users', userRoutes);
 
 // Default test route
 app.get('/test', (req, res) => res.json({ msg: 'Test' }));
