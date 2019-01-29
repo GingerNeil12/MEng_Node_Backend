@@ -8,15 +8,6 @@ const db = require('./config/keys').mongoURI;
 // Route Requires
 const userRoutes = require('./routes/api/user/userRoutes');
 
-const mongooseOptions = {
-    useMongoClient: true,
-    autoIndex: false,
-    reconnectTries: 100,
-    reconnectInterval: 500,
-    poolSize: 10,
-    bufferMaxEntries: 0
-}
-
 // Mongoose set up
 mongoose
     .connect(db)
