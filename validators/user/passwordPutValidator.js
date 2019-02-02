@@ -1,6 +1,7 @@
 const Validator = require('validator');
 const isEmpty = require('../is-empty');
 
+// TODO: Add regex for a password comparison.
 module.exports = function validate(data){
     const errors = {};
 

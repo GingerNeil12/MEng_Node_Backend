@@ -2,6 +2,7 @@ const Validator = require('validator');
 const isEmpty = require('../is-empty');
 
 // Data being passed in is the http request
+// TODO: Add regex for name and password comparison
 module.exports = function validateInput(data) {
     const errors = {};
 
