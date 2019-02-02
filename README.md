@@ -45,12 +45,14 @@ The following libraries were used in the creation of this project:
 * bcryptjs
 * validator
 * gravatar
+
 And the following is used in the development env only:
 * nodemon
 
 #### Other Projects
 
 The front end is done as a React.Js project at the following URL:
+
 https://github.com/GingerNeil12/MEng_React_Frontend
 
 The EA/Drawing alogrithm is a Java Spring project at the following URL:
