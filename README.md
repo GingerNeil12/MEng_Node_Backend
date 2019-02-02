@@ -51,6 +51,7 @@ And the following is used in the development env only:
 #### Other Projects
 
 The front end is done as a React.Js project at the following URL:
+https://github.com/GingerNeil12/MEng_React_Frontend
 
 The EA/Drawing alogrithm is a Java Spring project at the following URL:
 
