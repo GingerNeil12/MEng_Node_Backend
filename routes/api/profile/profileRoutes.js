@@ -3,14 +3,16 @@ const express = require('express');
 const router = express.Router();
 
 // Routes
-const hande = require('./handle');
-const userId = require('./userId');
+const current = require('./current');
 const all = require('./all');
+const handle = require('./handle');
+const userId = require('./userId');
 
 // Set up the routes
+router.use('/current', current);
+router.use('/all', all);
 router.use('/handle', handle);
 router.use('/user', userId);
-router.use('/all', all);
 
 // @route   api/profile/test
 // @desc    Default test route
