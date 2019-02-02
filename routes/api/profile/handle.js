@@ -7,7 +7,7 @@ const router = express.Router();
 // @access  Public
 router.get('/test', (req, res) => res.json({msg: 'ProfileRoutes Handle Test'}));
 
-// @route   api/profile/hanlde/{handle}
+// @route   api/profile/handle/{handle}
 // @desc    Gets user by their handle
 // @access  Public
 router.get('/:handle', (req, res) => {
