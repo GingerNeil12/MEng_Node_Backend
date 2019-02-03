@@ -1,5 +1,6 @@
 // Requires
 const express = require('express');
+const Profile = require('../../../models/ProfileModel');
 const router = express.Router();
 
 // @route   api/profile/handle/test
