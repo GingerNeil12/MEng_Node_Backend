@@ -11,7 +11,7 @@ const profileRoutes = require('./routes/api/profile/profileRoutes');
 
 // Mongoose set up
 mongoose
-    .connect(db)
+    .connect(db, { useNewUrlParser: true })
     .then(() => console.log('MongoDb Connected'))
     .catch((err => console.log(err)));
 
