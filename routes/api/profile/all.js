@@ -27,7 +27,6 @@ router.get('/', (req, res) => {
             console.log(err);
             res.status(404).json(errors);
         })
-    res.json({ msg: 'Get All Profiles' });
 });
 
 module.exports = router;
