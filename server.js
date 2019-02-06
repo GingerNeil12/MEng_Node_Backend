@@ -3,6 +3,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const passport = require('passport');
+const cors = require('cors');
 const db = require('./config/keys').mongoURI;
 
 // Route Requires
@@ -25,6 +26,9 @@ app.listen(port, () => {
 // Setting up the body parser
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
+// Setting up to allow CORS for the development env
+app.use(cors())
 
 // Passport config
 require('./config/passport')(passport);
