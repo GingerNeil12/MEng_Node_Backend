@@ -17,7 +17,7 @@ router.get('/test', (req, res) => res.json({ msg: 'Register Test' }));
 // @access  Public
 router.post('/', (req, res) => {
     const { errors, isValid } = validator(req.body);
-    if (!isValid) {
+    if (isValid == false) {
         return res.status(400).json(errors);
     }
 

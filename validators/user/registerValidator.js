@@ -4,7 +4,7 @@ const isEmpty = require('../is-empty');
 // Data being passed in is the http request
 // TODO: Add regex for name and password comparison
 module.exports = function validateInput(data) {
-    const errors = {};
+    let errors = {};
 
     const name = !isEmpty(data.name) ? data.name : '';
     const email = !isEmpty(data.email) ? data.email : '';
@@ -33,11 +33,12 @@ module.exports = function validateInput(data) {
     }
 
     if (!Validator.equals(password, password2)) {
-        errors.password = 'Passwords do not match';
+        errors.password2 = 'Passwords do not match';
     }
+
 
     return {
         errors,
         isValid: isEmpty(errors)
-    }
-}
+    };
+};
