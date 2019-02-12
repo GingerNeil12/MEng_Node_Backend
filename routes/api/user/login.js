@@ -28,14 +28,14 @@ router.post('/', (req, res) => {
     User.findOne({ email: email })
         .then(user => {
             if (!user) {
-                errors.user = 'Incorrect email or password';
+                errors.email = 'Incorrect email or password';
                 return res.status(404).json(errors);
             }
 
             bcrypt.compare(password, user.password)
                 .then(isMatch => {
                     if (!isMatch) {
-                        errors.user = 'Incorrect email or password';
+                        errors.email = 'Incorrect email or password';
                         res.status(404).json(errors);
                     } else {
                         const payload = {
