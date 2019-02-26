@@ -16,20 +16,31 @@ const DiagramSchema = new schema({
     },
     shapes: [
         {
-            xCoOrd: {
-                type: String,
-                required: true
-            },
-            yCoOrd: {
-                type: String,
-                required: true
-            },
-            width: {
-                type: String,
-                required: true
-            },
-            color: {
-                type: String,
+            shape: {
+                id: {
+                    type: Number,
+                    required: true
+                },
+                name: {
+                    type: String,
+                    required: true
+                },
+                x: {
+                    type: Number,
+                    required: true
+                },
+                y: {
+                    type: Number,
+                    required: true
+                },
+                width: {
+                    type: Number,
+                    required: true
+                },
+                color: {
+                    type: String,
+                    default: '#ffffff'
+                }
             }
         }
     ],
