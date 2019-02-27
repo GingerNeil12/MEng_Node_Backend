@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
-const schema = mongoose.schema;
+const Schema = mongoose.Schema;
 
-const DiagramSchema = new schema({
+const DiagramSchema = new Schema({
     user: {
-        type: schema.Types.ObjectId,
+        type: Schema.Types.ObjectId,
         ref: 'users'
     },
     name: {
@@ -16,31 +16,28 @@ const DiagramSchema = new schema({
     },
     shapes: [
         {
-            shape: {
-                id: {
-                    type: Number,
-                    required: true
-                },
-                name: {
-                    type: String,
-                    required: true
-                },
-                x: {
-                    type: Number,
-                    required: true
-                },
-                y: {
-                    type: Number,
-                    required: true
-                },
-                width: {
-                    type: Number,
-                    required: true
-                },
-                color: {
-                    type: String,
-                    default: '#ffffff'
-                }
+            sid: {
+                type: Number,
+                required: true
+            },
+            name: {
+                type: String,
+                required: true
+            },
+            x: {
+                type: Number,
+                required: true
+            },
+            y: {
+                type: Number,
+                required: true
+            },
+            width: {
+                type: Number,
+                required: true
+            },
+            color: {
+                type: String
             }
         }
     ],
@@ -50,4 +47,4 @@ const DiagramSchema = new schema({
     }
 });
 
-module.exports = Diagrams = mongoose.model('diagrams', DiagramSchema);
+module.exports = Diagram = mongoose.model('diagrams', DiagramSchema);
