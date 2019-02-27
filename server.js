@@ -9,7 +9,7 @@ const db = require('./config/keys').mongoURI;
 // Route Requires
 const userRoutes = require('./routes/api/user/userRoutes');
 const profileRoutes = require('./routes/api/profile/profileRoutes');
-const diagramRoutes = require('./routes/api/diagrams/diagrams');
+const diagramRoutes = require('./routes/api/diagrams/diagramRoutes');
 
 // Mongoose set up
 mongoose
