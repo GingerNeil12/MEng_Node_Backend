@@ -37,7 +37,7 @@ require('./config/passport')(passport);
 // Use Routes
 app.use('/api/users', userRoutes);
 app.use('/api/profile', profileRoutes);
-app.use('/api/diagrams', diagramRoutes);
+app.use('/api/diagram', diagramRoutes);
 
 // Default test route
 app.get('/test', (req, res) => res.json({ msg: 'Test' }));

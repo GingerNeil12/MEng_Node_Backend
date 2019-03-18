@@ -26,11 +26,7 @@ router.post('/', passport.authenticate('jwt', { session: false }), (req, res) =>
     const diagramFieilds = {};
     var date = new Date();
 
-    if(req.body.name){
-        diagramFieilds.name = req.body.name
-    } else {
-        diagramFieilds.name = 'Untitled_' + date.getDate();
-    }
+    diagramFieilds.name = `Untitled_${date.getDate()}${date.getMonth()}${date.getFullYear()}_${date.getHours()}:${date.getMinutes()}`
 
     diagramFieilds.dataSet = req.body.dataSet;
     diagramFieilds.user = req.user.id;
