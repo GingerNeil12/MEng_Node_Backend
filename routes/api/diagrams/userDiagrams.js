@@ -38,4 +38,27 @@ router.post('/', passport.authenticate('jwt', { session: false }), (req, res) =>
         .catch(err => res.status(500).json(err));
 });
 
+// @route   PUT api/diagram/user
+// @desc    Updates diagram to the logged in users account
+// @access  Private
+router.put('/:id', passport.authenticate('jwt', {session: false}), (req, res) => {
+    Diagram.findOne({_id: req.params.id})
+        .then(diagram => {
+            if(!diagram){
+                res.status(404).json({msg: 'No diagram found'})
+            } else {
+                diagram.name = req.body.name;
+                diagram.shapes = req.body.shapes;
+                diagram
+                    .save()
+                    .then(diagram => {
+                        res.json(diagram)
+                    })
+                    .catch(err => {
+                        res.status(500).json(err);
+                    })
+            }
+        })
+})
+
 module.exports = router;
